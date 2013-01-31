@@ -1,0 +1,14 @@
+name: pong
+version: 0.1.0
+authors:
+- Eric J. Smith <eric@codesmithtools.com>
+- ' Cody Smith <cody@ericjsmith.net>'
+description: A multiplayer pong game written in Dart.
+homepage: https://github.com/ejsmith/pong
+dependencies:
+  event_stream:
+    git: https://github.com/ejsmith/event_stream.git
+  unittest: any
+  browser: any
+  dgame:
+    git: https://github.com/ejsmith/dgame.git

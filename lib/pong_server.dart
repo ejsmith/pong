@@ -1,18 +1,18 @@
-library game_server;
+library pong_server;
 
 import "dart:io";
 import "dart:isolate";
 import "dart:json" as JSON;
-import "package:pong/pong_game.dart";
-import "package:dgame/dgame.dart";
+import 'package:pong/pong_game.dart';
+import 'package:dgame/dgame.dart';
 
-part "server_pong_game.dart";
-part "static_file_handler.dart";
-part "not_found_handler.dart";
+part 'src/server/server_pong_game.dart';
+part 'src/server/static_file_handler.dart';
+part 'src/server/not_found_handler.dart';
 
 List<ServerPongGame> _games;
 
-void main() {
+void startup() {
   HttpServer httpServer = new HttpServer();
   WebSocketHandler webSocketHandler = new WebSocketHandler();
   StaticFileHandler fileHandler = new StaticFileHandler("${new Directory.current().path}/web");

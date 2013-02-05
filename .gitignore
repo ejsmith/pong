@@ -4,3 +4,6 @@
 .DS_Store
 packages
 pubspec.lock
+*.dart.js
+*.dart.js.map
+

@@ -1,4 +1,4 @@
-part of game_server;
+part of pong_server;
 
 class ServerPongGame extends PongGame {
   WebSocketConnection wsPlayer1;

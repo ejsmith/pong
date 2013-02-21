@@ -129,7 +129,7 @@ class PongGame extends Game {
     disableEntitiesByGroup("stats");
     disableEntitiesByGroup("waiting");
     
-    _countdownTimer = new Timer.repeating(1000, (t) {
+    _countdownTimer = new Timer.repeating(const Duration(milliseconds: 1000), (t) {
       if (_countdown > 0) 
         _countdown--; 
       else {
@@ -151,7 +151,7 @@ class PongGame extends Game {
     disableEntitiesByGroup("paused");
     disableEntitiesByGroup("stats");
     
-    _waitingTimer = new Timer.repeating(1000, (t) {    
+    _waitingTimer = new Timer.repeating(const Duration(milliseconds: 1000), (t) {    
       if (!connected && state == PongGameState.waiting && !cancel)
         _waiting++;
       else {

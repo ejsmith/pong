@@ -1,4 +1,4 @@
-part of game_server;
+part of pong_server;
 
 class StaticFileHandler {
   String basePath;

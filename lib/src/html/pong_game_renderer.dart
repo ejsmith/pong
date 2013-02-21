@@ -103,34 +103,34 @@ class PongGameRenderer extends CanvasGameRenderer<PongGame> {
   void doPaddleHitEffect(Paddle paddle) {
     subtleBgFade();
     paddle.opacity = 0.5;
-    window.setTimeout(() => paddle.opacity = 0.4, 50);
-    window.setTimeout(() => paddle.opacity = 0.3, 100);
-    window.setTimeout(() => paddle.opacity = 0.2, 150);
+    new Timer(const Duration(milliseconds: 50), () => paddle.opacity = 0.4);
+    new Timer(const Duration(milliseconds: 100), () => paddle.opacity = 0.3);
+    new Timer(const Duration(milliseconds: 150), () => paddle.opacity = 0.2);
   }
   
   void subtleBgFade() {
     game.bgStyle = "rgba(0, 0, 0, 0.84)";
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.83)", 25);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.82)", 50);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.81)", 75);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.82)", 100);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.83)", 125);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.84)", 150);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.85)", 175);
+    new Timer(const Duration(milliseconds: 25), () => game.bgStyle = "rgba(0, 0, 0, 0.83)");
+    new Timer(const Duration(milliseconds: 50), () => game.bgStyle = "rgba(0, 0, 0, 0.82)");
+    new Timer(const Duration(milliseconds: 75), () => game.bgStyle = "rgba(0, 0, 0, 0.81)");
+    new Timer(const Duration(milliseconds: 100), () => game.bgStyle = "rgba(0, 0, 0, 0.82)");
+    new Timer(const Duration(milliseconds: 125), () => game.bgStyle = "rgba(0, 0, 0, 0.83)");
+    new Timer(const Duration(milliseconds: 150), () => game.bgStyle = "rgba(0, 0, 0, 0.84)");
+    new Timer(const Duration(milliseconds: 175), () => game.bgStyle = "rgba(0, 0, 0, 0.85)");
   }
   
   void bgFade() {
     game.bgStyle = "rgba(0, 0, 0, 0.8)";
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.75)", 25);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.70)", 50);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.65)", 75);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.60)", 100);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.55)", 125);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.60)", 150);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.65)", 175);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.70)", 200);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.75)", 225);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.80)", 250);
-    window.setTimeout(() => game.bgStyle = "rgba(0, 0, 0, 0.85)", 275);
+    new Timer(const Duration(milliseconds: 25), () => game.bgStyle = "rgba(0, 0, 0, 0.75)");
+    new Timer(const Duration(milliseconds: 50), () => game.bgStyle = "rgba(0, 0, 0, 0.70)");
+    new Timer(const Duration(milliseconds: 75), () => game.bgStyle = "rgba(0, 0, 0, 0.65)");
+    new Timer(const Duration(milliseconds: 100), () => game.bgStyle = "rgba(0, 0, 0, 0.60)");
+    new Timer(const Duration(milliseconds: 125), () => game.bgStyle = "rgba(0, 0, 0, 0.55)");
+    new Timer(const Duration(milliseconds: 150), () => game.bgStyle = "rgba(0, 0, 0, 0.60)");
+    new Timer(const Duration(milliseconds: 175), () => game.bgStyle = "rgba(0, 0, 0, 0.65)");
+    new Timer(const Duration(milliseconds: 200), () => game.bgStyle = "rgba(0, 0, 0, 0.70)");
+    new Timer(const Duration(milliseconds: 225), () => game.bgStyle = "rgba(0, 0, 0, 0.75)");
+    new Timer(const Duration(milliseconds: 250), () => game.bgStyle = "rgba(0, 0, 0, 0.80)");
+    new Timer(const Duration(milliseconds: 275), () => game.bgStyle = "rgba(0, 0, 0, 0.85)");
   }
 }

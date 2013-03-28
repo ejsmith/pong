@@ -12,12 +12,12 @@ class NotFoundHandler {
   void onRequest(HttpRequest req, HttpResponse res){
 
     if (_notFoundPage == null)
-      _notFoundPage = notFoundPageHtml.charCodes;
+      _notFoundPage = notFoundPageHtml.codeUnits;
     
     res.statusCode = HttpStatus.NOT_FOUND;
     res.headers.set("Content-Type", "text/html; charset=UTF-8");
     res.contentLength = _notFoundPage.length;
-    res.outputStream.write(_notFoundPage);
-    res.outputStream.close();
+    res.write(_notFoundPage);
+    res.close();
   }
 }

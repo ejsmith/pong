@@ -6,9 +6,9 @@ class StaticFileHandler {
   StaticFileHandler(String this.basePath);
   
   void onRequest(HttpRequest req, HttpResponse res){
-    String path = req.path;
+    String path = req.uri.path;
     if (path.endsWith('/'))
-      path = path.concat("index.html");
+      path = path + "index.html";
     String fileName = "$basePath$path";
     
     File file = new File(fileName);
@@ -32,7 +32,7 @@ class StaticFileHandler {
       res.contentLength = openedFile.lengthSync();
       openedFile.closeSync();
       // Pipe the file content into the response.
-      file.openInputStream().pipe(res.outputStream);
+      file.openRead().pipe(res);
     } else {
       print("File not found: $fileName");
       new NotFoundHandler().onRequest(req, res);
